@@ -27,6 +27,8 @@ import com.example.boxouwe3.MainActivity;
 import com.example.boxouwe3.R;
 import com.example.boxouwe3.ui.login.LoginViewModel;
 import com.example.boxouwe3.ui.login.LoginViewModelFactory;
+import com.example.boxouwe3.data.LoginRepository;
+
 
 public class LoginActivity extends AppCompatActivity {
 
