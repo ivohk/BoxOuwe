@@ -135,6 +135,8 @@ public class LoginActivity extends AppCompatActivity {
     }
     public void openMainActivity() {
         Intent intent = new Intent(this, MainActivity.class);
+       //zorg dat username nog beschikbaar is
+        intent.putExtra("gebruikersnaam", R.id.username);
         startActivity(intent);
 
     }

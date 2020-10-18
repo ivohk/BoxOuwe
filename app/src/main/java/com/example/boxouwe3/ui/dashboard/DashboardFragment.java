@@ -1,10 +1,12 @@
 package com.example.boxouwe3.ui.dashboard;
 
+import android.app.Person;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,12 +15,33 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.boxouwe3.FirstFragment;
 import com.example.boxouwe3.MainActivity;
+import com.example.boxouwe3.NieuweAct;
 import com.example.boxouwe3.R;
+//waarom pakt die hem hier?
+import com.example.boxouwe3.data.LoginDataSource;
+import com.example.boxouwe3.data.Result;
+import com.example.boxouwe3.data.model.LoggedInUser;
+
+import java.io.IOException;
+import com.example.boxouwe3.NieuweAct;
+import com.example.boxouwe3.ui.login.LoginActivity;
 
 public class DashboardFragment extends Fragment {
 
     private DashboardViewModel dashboardViewModel;
+   /* public void ActiviteitAanmaken(View v) {
+        Intent intent2 = new Intent(getActivity(),
+                NieuweAct.class);
+        startActivity(intent2);
+    }*/
+   /* Button plusButton = (Button) findViewById(R.id.floatingActionButton2);
+    plusButton.setOnClickListener(new OnClickListener(){
+        public void onClick(View v){
+            startActivity(new Intent(YourCurrentActivity.this, YourNewActivity.class));
+        }
+    });*/
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -32,11 +55,41 @@ public class DashboardFragment extends Fragment {
                 textView.setText(s);
             }
         });
+        final View view = inflater.inflate(R.layout.fragment_dashboard, container, false);
+        final View button = view.findViewById(R.id.floatingActionButton22);
+        //button knop = button.findViewById(R.id.floatingActionButton2)
+        button.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent i = new Intent(getContext(), NieuweAct.class);
+                        startActivity(i);
 
-        return root;
+                    }
+                }
+        );
+        /*Button plusknop;
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.fragment_dashboard);
+        plusknop = (Button) findViewById(R.id.floatingActionButton2);*/
+
+        return view;
     }
-    public void ActiviteitAanmaken(View view) {
-        Intent intent = new Intent(this, NieuweActivieit.class);
-        startActivity(intent);
+
+   /* public void ActiviteitAanmaken() {
+        Intent intent2 = new Intent(this,
+                NieuweAct.class);
+        startActivity(intent2);
     }
+*/
+    //LoggedInUser user = new LoggedInUser(java.util.UUID.randomUUID().toString(),
+            //);
+    //String userId = user.getuserId();
+    //String DisplayName = user.getDisplayName();
+
+
+
+
 }

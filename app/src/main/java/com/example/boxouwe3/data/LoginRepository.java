@@ -1,5 +1,7 @@
 package com.example.boxouwe3.data;
 
+import android.database.sqlite.SQLiteDatabase;
+
 import com.example.boxouwe3.data.model.LoggedInUser;
 
 /**
@@ -39,9 +41,16 @@ public class LoginRepository {
 
     private void setLoggedInUser(LoggedInUser user) {
         this.user = user;
+        //FeedReaderDbHelper dbHelper = new FeedReaderDbHelper(getContext());
+        //SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+
         // If user credentials will be cached in local storage, it is recommended it be encrypted
         // @see https://developer.android.com/training/articles/keystore
     }
+    //public void onCreate(SQLiteDatabase mydatabase) {
+      //  db.execSQL(SQLiteDatabase.findEditTable());
+ //   })
 
     public Result<LoggedInUser> login(String username, String password) {
         // handle login
