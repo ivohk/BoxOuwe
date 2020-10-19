@@ -60,7 +60,7 @@ public class DashboardFragment extends Fragment {
         //final String Naam = String.valueOf(intent.getIntExtra("Name", 0));
         final String Locatie = String.valueOf(intent.getIntExtra("Locatie", 0));
 
-        final TextView usertext = getActivity().findViewById(R.id.textViewUser);
+        //final TextView usertext = getActivity().findViewById(R.id.textViewUser);
 
 
 

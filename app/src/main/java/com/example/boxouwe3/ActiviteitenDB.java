@@ -16,8 +16,7 @@ public class ActiviteitenDB {
     private static NieuweAct sActiviteitenDB;
     private Context mContext;
 
-    // private constructor zodat niemand anders een NotitieBlok kan maken
-    // en we dus garanderen dat er maar één is
+
     private ActiviteitenDB (Context context) {
         mContext = context.getApplicationContext();
         mydatabase = new Database(mContext).getWritableDatabase();
