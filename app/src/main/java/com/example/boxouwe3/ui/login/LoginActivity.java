@@ -29,6 +29,7 @@ import com.example.boxouwe3.ui.login.LoginViewModel;
 import com.example.boxouwe3.ui.login.LoginViewModelFactory;
 import com.example.boxouwe3.data.LoginRepository;
 
+//grotendeels gegenereerd door android studio
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -133,6 +134,8 @@ public class LoginActivity extends AppCompatActivity {
     private void showLoginFailed(@StringRes Integer errorString) {
         Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
     }
+
+    //openmainactivity() komt terug in de xml van de button, zodat na het inloggen de mainactivity geopend wordt.
     public void openMainActivity() {
         Intent intent = new Intent(this, MainActivity.class);
        //zorg dat username nog beschikbaar is

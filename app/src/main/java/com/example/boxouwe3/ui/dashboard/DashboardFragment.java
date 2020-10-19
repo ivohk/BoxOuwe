@@ -26,17 +26,7 @@ import static android.content.Intent.getIntentOld;
 public class DashboardFragment extends Fragment {
 
     private DashboardViewModel dashboardViewModel;
-   /* public void ActiviteitAanmaken(View v) {
-        Intent intent2 = new Intent(getActivity(),
-                NieuweAct.class);
-        startActivity(intent2);
-    }*/
-   /* Button plusButton = (Button) findViewById(R.id.floatingActionButton2);
-    plusButton.setOnClickListener(new OnClickListener(){
-        public void onClick(View v){
-            startActivity(new Intent(YourCurrentActivity.this, YourNewActivity.class));
-        }
-    });*/
+
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -60,21 +50,10 @@ public class DashboardFragment extends Fragment {
         //final String Naam = String.valueOf(intent.getIntExtra("Name", 0));
         final String Locatie = String.valueOf(intent.getIntExtra("Locatie", 0));
 
-        //final TextView usertext = getActivity().findViewById(R.id.textViewUser);
 
 
 
-        /*buttonUpdate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                usertext.setText(Naam);
-
-
-            }
-        });*/
-
-
-
+        //onclick listener zodat het aanmaken van een nieuwe activiteit wordt gestart
         button.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -89,26 +68,13 @@ public class DashboardFragment extends Fragment {
                     }
                 }
         );
-        /*Button plusknop;
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_dashboard);
-        plusknop = (Button) findViewById(R.id.floatingActionButton2);*/
 
+
+
+        //view moet te zien blijven
         return view;
     }
 
-   /* public void ActiviteitAanmaken() {
-        Intent intent2 = new Intent(this,
-                NieuweAct.class);
-        startActivity(intent2);
-    }
-*/
-    //LoggedInUser user = new LoggedInUser(java.util.UUID.randomUUID().toString(),
-            //);
-    //String userId = user.getuserId();
-    //String DisplayName = user.getDisplayName();
 
 
 

@@ -111,7 +111,7 @@ public class NieuweAct extends AppCompatActivity {
                 //intent.putExtras()
                 //startActivity(intent);
 
-               /* Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+               /* .make(view, "", .LENGTH_LONG)
                         .setAction("Action", null).show();*/
             }
         //});
@@ -119,8 +119,4 @@ public class NieuweAct extends AppCompatActivity {
     public EditText getEditTextLocatie() { return getEditTextLocatie(); }
     }
 
-    /*public View verstuur() {
-        Intent intent = new Intent(this, DashboardFragment.class);
-        startActivity(intent);
-        return view;
-    }*/
+
