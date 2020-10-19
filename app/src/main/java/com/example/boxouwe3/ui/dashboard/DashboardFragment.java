@@ -1,6 +1,7 @@
 package com.example.boxouwe3.ui.dashboard;
 
-import android.app.Person;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -15,18 +16,12 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.example.boxouwe3.FirstFragment;
-import com.example.boxouwe3.MainActivity;
 import com.example.boxouwe3.NieuweAct;
 import com.example.boxouwe3.R;
-//waarom pakt die hem hier?
-import com.example.boxouwe3.data.LoginDataSource;
-import com.example.boxouwe3.data.Result;
-import com.example.boxouwe3.data.model.LoggedInUser;
 
-import java.io.IOException;
-import com.example.boxouwe3.NieuweAct;
-import com.example.boxouwe3.ui.login.LoginActivity;
+import static android.content.Intent.getIntentOld;
+//waarom pakt die hem hier?
+
 
 public class DashboardFragment extends Fragment {
 
@@ -43,6 +38,7 @@ public class DashboardFragment extends Fragment {
         }
     });*/
 
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         dashboardViewModel =
@@ -57,14 +53,39 @@ public class DashboardFragment extends Fragment {
         });
         final View view = inflater.inflate(R.layout.fragment_dashboard, container, false);
         final View button = view.findViewById(R.id.floatingActionButton22);
-        //button knop = button.findViewById(R.id.floatingActionButton2)
+        final View buttonUpdate = view.findViewById(R.id.Update);
+
+        Intent intent = getActivity().getIntent();
+        final String Naam = intent.getStringExtra("Name");
+        //final String Naam = String.valueOf(intent.getIntExtra("Name", 0));
+        final String Locatie = String.valueOf(intent.getIntExtra("Locatie", 0));
+
+        final TextView usertext = getActivity().findViewById(R.id.textViewUser);
+
+
+
+        /*buttonUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                usertext.setText(Naam);
+
+
+            }
+        });*/
+
+
+
         button.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         Intent i = new Intent(getContext(), NieuweAct.class);
                         startActivity(i);
-
+                       /* AanmakenActiviteitFragment nextFrag= new AanmakenActiviteitFragment();
+                        getActivity().getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.navigation_dashboard, nextFrag, "findThisFragment")
+                                .addToBackStack(null)
+                                .commit();*/
                     }
                 }
         );
