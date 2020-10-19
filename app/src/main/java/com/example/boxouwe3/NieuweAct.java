@@ -1,9 +1,13 @@
 package com.example.boxouwe3;
 
+import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
-import com.example.boxouwe3.ui.dashboard.DashboardFragment;
+import com.example.boxouwe3.data.Database;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,11 +19,20 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.UUID;
+
 public class NieuweAct extends AppCompatActivity {
     //private TextView mTextViewResult;
+
     private EditText EditTextNaam;
     private EditText EditTextLocatie;
-    String description = "Tutorial";
+    //String description = "Tutorial";
+
+
+
 
     private View view;
 
@@ -44,8 +57,8 @@ public class NieuweAct extends AppCompatActivity {
                             Toast.makeText(NieuweAct.this ,"Vul de gegevens alstublieft in", Toast.LENGTH_SHORT).show();
                         } else {
                            //String naam = String.
-                            i.putExtra("naam", (Parcelable) EditTextNaam);
-                            i.putExtra("Locatie", (Parcelable) EditTextLocatie);
+                            /*i.putExtra("naam", (Parcelable) EditTextNaam);
+                            i.putExtra("Locatie", (Parcelable) EditTextLocatie);*/
 
                             startActivity(i);
                         }
@@ -76,6 +89,8 @@ public class NieuweAct extends AppCompatActivity {
                         .setAction("Action", null).show();*/
             }
         //});
+    public EditText getEditTextNaam() { return getEditTextNaam(); }
+    public EditText getEditTextLocatie() { return getEditTextLocatie(); }
     }
 
     /*public View verstuur() {
