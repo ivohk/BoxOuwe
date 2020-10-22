@@ -65,67 +65,6 @@ public class AanmakenActiviteitFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Toolbar toolbar = toolbar.findViewById();
-        //setSupportActionBar(toolbar);
-
-            /*EditTextLocatie = EditTextLocatie.findViewById();
-
-            FloatingActionButton fab = fab.findViewById();
-
-            fab.setOnClickListener(
-                    new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            Intent i = new Intent(getContext(), MainActivity.class);
-                            if (EditTextNaam.getText().toString().equals("")
-                                    || EditTextLocatie.getText().toString().equals("")) {
-                                Toast.makeText(NieuweAct.this ,"Vul de gegevens alstublieft in", Toast.LENGTH_SHORT).show();
-                            } else {
-                                //String naam = String.
-                            *//*i.putExtra("naam", (Parcelable) EditTextNaam);
-                            i.putExtra("Locatie", (Parcelable) EditTextLocatie);*//*
-
-                                startActivity(i);
-                            }
-
-                            //Intent i = new Intent(getApplicationContext(),MainActivity.class);
-                            //stuur gegevens naar dashboard
-                        *//*i.putExtras("Tutorial", description);
-                        i.putExtra("NAAM", editText);*//*
-                            //startActivity(i);
-
-                        }
-                    }
-            );
-
-      *//*  fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //stuur info naar database*//*
-
-            //open het dashboard weer
-            //Intent intent = new Intent(this, DashboardFragment.class);
-
-            //stuur gegevens naar dashboard
-            //intent.putExtras()
-            //startActivity(intent);
-
-               *//* Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();*//*
-        }
-        //});
-        public EditText getEditTextNaam() { return getEditTextNaam(); }
-        public EditText getEditTextLocatie() { return getEditTextLocatie(); }
-*/
-
-
-  /*  @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_aanmaken_activiteit, container, false);
-    }
-}*/
 
     }
 }

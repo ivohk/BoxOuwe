@@ -20,8 +20,6 @@ import com.example.boxouwe3.NieuweAct;
 import com.example.boxouwe3.R;
 
 import static android.content.Intent.getIntentOld;
-//waarom pakt die hem hier?
-
 
 public class DashboardFragment extends Fragment {
 
@@ -60,11 +58,7 @@ public class DashboardFragment extends Fragment {
                     public void onClick(View view) {
                         Intent i = new Intent(getContext(), NieuweAct.class);
                         startActivity(i);
-                       /* AanmakenActiviteitFragment nextFrag= new AanmakenActiviteitFragment();
-                        getActivity().getSupportFragmentManager().beginTransaction()
-                                .replace(R.id.navigation_dashboard, nextFrag, "findThisFragment")
-                                .addToBackStack(null)
-                                .commit();*/
+
                     }
                 }
         );

@@ -21,7 +21,7 @@ public class Activiteit {
         mLocatie = "";
     }
 
-    //public UUID getId() { return mId; }
+
     public void setNaam(String naam) {
         mNaam = naam;
     }

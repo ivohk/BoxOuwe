@@ -31,28 +31,6 @@ public class NieuweAct extends AppCompatActivity {
     private Activiteit mActiviteit;
     private EditText EditTextNaam;
     private EditText EditTextLocatie;
-    //String description = "Tutorial";
-
-
-    /*public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        //mNotitie = new Notitie();
-        //mNotitie.setTitel("Mijn titel");
-        //mNotitie.setBeschrijving("Dit is de beschrijving van mijn notitie.");
-        UUID id = (UUID) getActivity().getIntent()
-                .getSerializableExtra("com.example.noteapplication.notitie_id");
-        mNotitie = NotitieBlok.getCurrent(getActivity()).getNotitie(id);
-    }
-
-
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        Activiteit.getCurrent(getActivity()).updateNotitie(mActiviteit);
-    }
-*/
-
 
     private View view;
 
@@ -71,50 +49,22 @@ public class NieuweAct extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Intent i = new Intent(getApplicationContext(),MainActivity.class);
+                        Intent i = new Intent(getApplicationContext(), MainActivity.class);
                         if (EditTextNaam.getText().toString().equals("")
-                            || EditTextLocatie.getText().toString().equals("")) {
-                            Toast.makeText(NieuweAct.this ,"Vul de gegevens alstublieft in", Toast.LENGTH_SHORT).show();
+                                || EditTextLocatie.getText().toString().equals("")) {
+                            Toast.makeText(NieuweAct.this, "Vul de gegevens alstublieft in", Toast.LENGTH_SHORT).show();
                         } else {
-
-                            //String name = String.copyValueOf(findViewById(R.id.editTextNaam));
                             String name = EditTextNaam.getText().toString();
-
-                           //String naam = String.
                             i.putExtra("name", String.valueOf(EditTextNaam));
                             i.putExtra("Locatie", String.valueOf(EditTextLocatie));
-
-                            //i.putExtra("Locatie", (Parcelable) EditTextLocatie);*/
-
                             startActivityForResult(i, 1);
                         }
-
-                        //Intent i = new Intent(getApplicationContext(),MainActivity.class);
-                        //stuur gegevens naar dashboard
-                        /*i.putExtras("Tutorial", description);
-                        i.putExtra("NAAM", editText);*/
-                        //startActivity(i);
 
                     }
                 }
         );
-
-      /*  fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //stuur info naar database*/
-
-                //open het dashboard weer
-                //Intent intent = new Intent(this, DashboardFragment.class);
-
-                //stuur gegevens naar dashboard
-                //intent.putExtras()
-                //startActivity(intent);
-
-               /* .make(view, "", .LENGTH_LONG)
-                        .setAction("Action", null).show();*/
             }
-        //});
+
     public EditText getEditTextNaam() { return getEditTextNaam(); }
     public EditText getEditTextLocatie() { return getEditTextLocatie(); }
     }
