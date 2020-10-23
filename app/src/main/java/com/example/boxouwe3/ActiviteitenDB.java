@@ -11,6 +11,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+/**
+ * class waarmee de database geupdate kan worden
+ */
+
 public class ActiviteitenDB {
     private SQLiteDatabase mydatabase;
     private static NieuweAct sActiviteitenDB;

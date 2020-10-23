@@ -26,6 +26,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
+/**class om een activiteit aan te maken, nadat de knop hiervoor is ingedrukt**/
+
+
 public class NieuweAct extends AppCompatActivity {
     //private TextView mTextViewResult;
     private Activiteit mActiviteit;
@@ -35,6 +38,7 @@ public class NieuweAct extends AppCompatActivity {
     private View view;
 
     @Override
+    //scherm creëren
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nieuwe);
@@ -44,7 +48,7 @@ public class NieuweAct extends AppCompatActivity {
         EditTextLocatie = findViewById(R.id.editTextLocatie);
 
         FloatingActionButton fab = findViewById(R.id.fab21);
-
+        // Onclick listener voor de hierboven defined button, inclusief if/else omdat er geen lege gegevens ingevoerd mogen worden.
         fab.setOnClickListener(
                 new View.OnClickListener() {
                     @Override

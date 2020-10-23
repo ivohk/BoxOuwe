@@ -3,7 +3,7 @@ package com.example.boxouwe3.ui.login;
 import androidx.annotation.Nullable;
 
 /**
- * Data validation state of the login form.
+ * Datavalidatie van het login-form
  */
 class LoginFormState {
     @Nullable

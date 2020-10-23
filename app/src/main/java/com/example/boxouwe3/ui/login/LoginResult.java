@@ -3,7 +3,7 @@ package com.example.boxouwe3.ui.login;
 import androidx.annotation.Nullable;
 
 /**
- * Authentication result : success (user details) or error message.
+ * Authenticatieresultaat : "succes" of error
  */
 class LoginResult {
     @Nullable

@@ -11,6 +11,10 @@ import com.example.boxouwe3.data.Result;
 import com.example.boxouwe3.data.model.LoggedInUser;
 import com.example.boxouwe3.R;
 
+/**
+ * viewmodel class voor het inlogscherm
+ */
+
 public class LoginViewModel extends ViewModel {
 
     private MutableLiveData<LoginFormState> loginFormState = new MutableLiveData<>();

@@ -6,6 +6,10 @@ import androidx.lifecycle.ViewModel;
 
 import com.example.boxouwe3.R;
 
+/**
+ * Viewmodel class voor het homescherm
+ */
+
 public class HomeViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;

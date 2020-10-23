@@ -1,32 +1,24 @@
 package com.example.boxouwe3.ui.dashboard;
 
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
-
 import com.example.boxouwe3.NieuweAct;
 import com.example.boxouwe3.R;
-
-import static android.content.Intent.getIntentOld;
 
 public class DashboardFragment extends Fragment {
 
     private DashboardViewModel dashboardViewModel;
 
-
-
+    //visuele elementen creëren
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         dashboardViewModel =
@@ -40,37 +32,21 @@ public class DashboardFragment extends Fragment {
             }
         });
         final View view = inflater.inflate(R.layout.fragment_dashboard, container, false);
+        //de twee buttons definiëren
         final View button = view.findViewById(R.id.floatingActionButton22);
         final View buttonUpdate = view.findViewById(R.id.Update);
 
-        Intent intent = getActivity().getIntent();
-        final String Naam = intent.getStringExtra("Name");
-        //final String Naam = String.valueOf(intent.getIntExtra("Name", 0));
-        final String Locatie = String.valueOf(intent.getIntExtra("Locatie", 0));
-
-
-
-
-        //onclick listener zodat het aanmaken van een nieuwe activiteit wordt gestart
+        //onclick listener met nieuwe intent zodat het aanmaken van een nieuwe activiteit wordt gestart
         button.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         Intent i = new Intent(getContext(), NieuweAct.class);
                         startActivity(i);
-
                     }
                 }
         );
-
-
-
         //view moet te zien blijven
         return view;
     }
-
-
-
-
-
 }

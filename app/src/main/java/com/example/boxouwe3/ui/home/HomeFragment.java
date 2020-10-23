@@ -14,10 +14,15 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.boxouwe3.R;
 
+/**
+ * Class met de contents van de hub, enkel visuele elementen.
+ */
+
 public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
 
+    //visuele elementen
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel =

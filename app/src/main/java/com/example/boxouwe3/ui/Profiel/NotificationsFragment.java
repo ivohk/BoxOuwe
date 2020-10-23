@@ -1,4 +1,4 @@
-package com.example.boxouwe3.ui.notifications;
+package com.example.boxouwe3.ui.Profiel;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,6 +14,9 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.boxouwe3.R;
 
+/**
+ * Fragment waar de content van het profiel wordt weergeven, enkel visuele onderdelen
+ */
 public class NotificationsFragment extends Fragment {
 
     private NotificationsViewModel notificationsViewModel;
